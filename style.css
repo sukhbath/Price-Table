@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+
+
+    font-family: 'Heebo', sans-serif;
+
+}
+body {
+    background: #f1f0f5;
+}
+
+#wrapper {
+    margin: 1rem 0;
+}
+
+#wrapper header {
+    text-align: center;
+}
+
+#wrapper header>h2,
+#wrapper header>p {
+    color: rgb(63, 63, 63);
+}
+
+header #discription {
+    margin: 1rem;
+}
+
+header .plan-duration {
+    display: flex;
+    width: 11rem;
+    margin: 1rem auto;
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: .2rem;
+    border: 2px solid rgb(44, 138, 232);
+    position: relative;
+
+
+}
+
+header .plan-duration::after {
+    width: 50%;
+    background: rgb(30, 135, 240);
+    content: '';
+    transition: .6s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: .3s left;
+    z-index: -1;
+    border: .2rem solid rgb(44, 138, 232);
+}
+
+header .plan-duration-new::after {
+    left: 50%;
+}
+
+header .plan-duration div {
+    width: 50%;
+    padding: .3rem 0;
+    color: #686868;
+    font-weight: bold;
+    font-size: .85rem;
+    cursor: pointer;
+    transition: .2s color;
+    position: relative;
+
+
+}
+
+header .plan-duration div:nth-of-type(2) {
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+
+}
+
+
+section #three-plans {
+    width: 85vw;
+    margin: 3rem auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+#three-plans .plan {
+    width: 27%;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 4px 5px 8px 2px rgba(0, 0, 0, 0.021);
+    padding: 2rem 0 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#three-plans .plan-basic {
+    background: url(icons/wave1.png) white no-repeat bottom;
+    background-size: 100%;
+
+}
+
+#three-plans .plan-plus {
+    background: url(icons/wave2.png) white no-repeat bottom;
+    background-size: 100%;
+
+}
+
+#three-plans .plan-premium {
+    background: url(icons/wave3.png) white no-repeat bottom;
+    background-size: 100%;
+}
+
+.plan img {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin: auto;
+}
+
+.plan .level {
+    margin: 1rem auto 2.5rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.price span {
+    display: inline-block;
+    width: 5rem;
+    text-align: left;
+}
+
+.plan .level::after {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    width: 2.5rem;
+    display: inline-block;
+    height: .3rem;
+    background: red;
+}
+
+.plan .benefits {
+    list-style: none;
+    margin: .5rem 0 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 5.3rem;
+    justify-content: center;
+}
+
+.more-benefits{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: rgba(255, 255, 255, 0.966);
+    border: 1px rgba(141, 141, 141, 0.041) solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: .7s top ease-in-out;
+
+}
+.more-benefits-new{
+    top: 00%;
+}
+
+.more-benefits ul{
+    margin: auto;
+}
+.more-benefits ul li{
+    padding: 1rem;
+    display: block;
+    /* background: red; */
+
+
+}
+#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .4rem;
+    font-size: 1.5rem;
+    color: rgba(148, 148, 148, 0.363);
+    cursor: pointer;
+}
+#close:hover{
+    color: rgba(148, 148, 148, 0.212);
+
+}
+
+
+ul {
+    list-style: none;
+    /* z-index: 22; */
+}
+
+.plan .benefits li {
+    margin: .5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.781);
+}
+#showmore{
+    z-index: 100;
+}
+#showmore span{
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 22;
+    color: rgba(0, 26, 255, 0.767);
+}
+.plan .benefits li::before {
+    content: '\2714';
+    font-size: .85rem;
+    margin-right: .5rem;
+    color: rgb(255, 187, 0);
+}
+
+.plan .price {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.plan .duration {
+    color: hsla(0, 0%, 41%, 0.74);
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.plan .price span {
+    font-size: 2.5rem;
+}
+
+.plan .choose {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: white;
+    outline: none;
+    padding: .5rem 0;
+    border-radius: 3.5px;
+    /* text-align: center; */
+    width: 50%;
+    margin: auto;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+.plan .choose span{
+    display: inline-block;
+    padding-right: .5rem;
+    transition: .4s padding-right ;
+
+}
+.plan .choose:hover span{
+    padding-right: 0px;
+    
+}
+
+
+.plan .choose i {
+    vertical-align: middle;
+    padding: 0 .7rem;
+}
+@media  screen and  (max-width:600px) 
+     {
+    body{
+         /* background: red;  */
+    }
+    #three-plans{
+        flex-wrap:wrap ;
+    }
+    #three-plans .plan {
+        width: 90%;
+        margin: .7rem 0;
+    }
+    #three-plans .plan {
+        padding: 02rem 0 2rem 0;
+    }
+   
+  }
